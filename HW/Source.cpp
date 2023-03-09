@@ -60,5 +60,60 @@ int main() {
     }
     cout << endl;
 
+
+
+
+
+
+    double arr[14];
+    for (int i = 0; i < 14; i++) 
+    {
+        cout << "Введите число: ";
+        cin >> arr[i];
+    }
+
+   
+    double new_arr[14];
+    int new_arr_size = 0;
+    for (int i = 0; i < 14; i++)
+    {
+        if (arr[i] > -5 && arr[i] <= 10) 
+        {
+            new_arr[new_arr_size] = arr[i];
+            new_arr_size++;
+        }
+    }
+
+
+    double max_abs = abs(new_arr[0]);
+    for (int i = 1; i < new_arr_size; i++) 
+    {
+        if (abs(new_arr[i]) > max_abs)
+        {
+            max_abs = abs(new_arr[i]);
+        }
+    }
+
+    cout << "Исходный массив:";
+    for (int i = 0; i < 14; i++) 
+    {
+
+        cout << " " << arr[i];
+    }
+    cout << endl;
+
+    cout << "Новый массив:";
+    for (int i = 0; i < new_arr_size; i++) 
+    {
+        cout << " " << new_arr[i];
+    }
+    cout << endl;
+
+    cout << "Наибольший по модулю элемент нового массива: " << max_abs << endl;
+
+
+
+
+
     return 0;
 }
